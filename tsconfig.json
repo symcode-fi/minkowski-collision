@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "useDefineForClassFields": true,
+    "module": "es2022",
+    "moduleResolution": "node16",
+    "esModuleInterop": true,
+    "declaration": true,
+    "strict": true,
+    "sourceMap": true,
+    "isolatedModules": true,
+    "lib": ["es2022"],
+    "outDir": "dist"
+  },
+  "include": ["src"],
+}

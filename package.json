@@ -1,0 +1,40 @@
+{
+  "name": "@symcode-fi/minkowski-collision",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Convex polygon collision checking using Minkowski difference",
+  "main": "dist/minkowski-collision.js",
+  "types": "dist/minkowski-collision.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "prepare": "tsc",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/symcode-fi/minkowski-collision.git"
+  },
+  "homepage": "https://github.com/symcode-fi/minkowski-collision/blob/main/README.md",
+  "keywords": [
+    "minkowski",
+    "collision"
+  ],
+  "author": "Jari Hämäläinen <jari.hamalainen@symcode.fi>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/lodash.clonedeep": "^4.5.7",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4"
+  }
+}
