@@ -254,28 +254,14 @@ export function segmentIntersection(
 
   const d = -tv2.x * tv1.y + tv1.x * tv2.y;
   if (d === 0) return ip;
-  // if (Math.abs(d) < epsilon) return undefined;
 
   // TODO: re-think this. if already know that a and b intersect, we only need s because in that case s === t?
 
   const s = (-tv1.y * (a.a.x - b.a.x) + tv1.x * (a.a.y - b.a.y)) / d;
   if (s < 0 || s > 1) return ip;
 
-  // return {
-  //   x: a.a.x + s * v1.x,
-  //   y: a.a.y + s * v1.y,
-  //   s,
-  //   t: Number.NaN,
-  // };
-
   const t = (tv2.x * (a.a.y - b.a.y) - tv2.y * (a.a.x - b.a.x)) / d;
   if (t < 0 || t > 1) return ip;
-
-  // if (Math.abs(s - t) < epsilon) {
-  //   console.log(`segmentIntersection: s === t === ${s}, ${t}, ${d}`);
-  // } else {
-  //   console.log(`segmentIntersection: s !== t -/- ${s}, ${t}, ${d}`);
-  // }
 
   ip.x = a.a.x + t * tv1.x;
   ip.y = a.a.y + t * tv1.y;
@@ -289,8 +275,6 @@ export function pointToSegmentProjection(
   p: Vec2,
   s: Segment,
   proj: Vec2,
-  // tv1: Vec2,
-  // tv2: Vec2,
 ): Vec2 {
   const tv1: Vec2 = {
     x: p.x - s.a.x,
@@ -300,10 +284,6 @@ export function pointToSegmentProjection(
     x: s.b.x - s.a.x,
     y: s.b.y - s.a.y,
   };
-  // tv1.x = p.x - s.a.x;
-  // tv1.y = p.y - s.a.y;
-  // tv2.x = s.b.x - s.a.x;
-  // tv2.y = s.b.y - s.a.y;
 
   const dp = tv1.x * tv2.x + tv1.y * tv2.y;
   const mt1 = Math.sqrt(tv1.x * tv1.x + tv1.y * tv1.y);
