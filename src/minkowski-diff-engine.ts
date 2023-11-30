@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2022, Symcode Oy
-import cloneDeep from 'lodash.clonedeep';
+import rfdc from 'rfdc';
 import {
   minkowskiSumConvex,
   ReusablePointArray,
@@ -15,6 +15,8 @@ import {
   ReusablePointArrayLp,
   indexOfLowestPoint,
 } from './minkowski-math.js';
+
+const cloneDeep = rfdc();
 
 export interface BoundingBox {
   xmin: number;
