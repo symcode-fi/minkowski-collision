@@ -1,6 +1,6 @@
 {
   "name": "@symcode-fi/minkowski-collision",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "type": "module",
   "description": "Convex polygon collision checking using Minkowski difference",
   "main": "dist/minkowski-collision.js",
